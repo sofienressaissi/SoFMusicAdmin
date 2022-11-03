@@ -185,7 +185,7 @@ export default function AddRelease() {
             
             
         } catch (err) {
-            toast.show({title: err.response.data.msg, position: 'topright', type: 'alert'});
+            toast.show({title: "Error adding release!", position: 'topright', type: 'alert'});
         }
       };
 

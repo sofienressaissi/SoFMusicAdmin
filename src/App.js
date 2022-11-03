@@ -6,7 +6,6 @@ import { useLoading, BallTriangle } from '@agney/react-loading';
 import AdminContext from './context/AdminContext';
 
 const HomeView = lazy(() => import("./pages/homepage"));
-const RegisterView = lazy(() => import("./pages/registerPage"));
 const LoginView = lazy(() => import("./pages/loginPage"));
 const AddReleaseView = lazy(() => import("./pages/addRelease"));
 const AllReleasesView = lazy(() => import("./pages/allReleases"));
