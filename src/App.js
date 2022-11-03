@@ -77,7 +77,7 @@ useEffect(() => {
                   <Route exact path="/admin/messages" component={AllMessages} />
                   <Route exact path="/admin/feedbacks" component={AllFeedbacks} />
                   {
-                    adminData.admin !== "{}" ? 
+                    adminData.token ?
                     <>
                       <Redirect from="/" to="/admin" />
                     </> : <>
