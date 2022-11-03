@@ -1,0 +1,59 @@
+{
+  "name": "sofmusic_dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@agney/react-loading": "0.1.2",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@material-ui/core": "5.0.0-alpha.28",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "axios": "0.21.1",
+    "emailjs-com": "2.6.4",
+    "formik": "2.2.9",
+    "moment": "2.29.1",
+    "react": "^17.0.2",
+    "react-datepicker": "^4.2.1",
+    "react-dom": "^17.0.2",
+    "react-favicon": "^0.0.23",
+    "react-helmet": "6.1.0",
+    "react-icons": "4.2.0",
+    "react-moment": "1.1.1",
+    "react-router-dom": "5.2.0",
+    "react-scripts": "4.0.3",
+    "react-select": "^4.3.1",
+    "react-youtube": "^7.13.1",
+    "serve": "11.3.2",
+    "sweetalert2": "11.1.4",
+    "toast-notification-alert": "^1.0.5",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "dev": "react-scripts start",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
