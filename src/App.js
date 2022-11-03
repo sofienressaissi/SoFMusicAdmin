@@ -1,6 +1,6 @@
 import './App.css';
 import React, { Suspense, lazy, useState, useEffect } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import Axios from "axios";
 import { useLoading, BallTriangle } from '@agney/react-loading';
 import AdminContext from './context/AdminContext';
@@ -70,7 +70,6 @@ useEffect(() => {
               <section {...containerProps}>{indicatorEl}</section></div>}>
                 <Switch>
                   <Route exact path="/admin" component={HomeView} />
-                  <Route exact path="/admin/register" component={RegisterView} />
                   <Route exact path="/admin/login" component={LoginView} />
                   <Route exact path="/admin/new-release/add" component={AddReleaseView} />
                   <Route exact path="/admin/releases" component={AllReleasesView} />
@@ -78,6 +77,14 @@ useEffect(() => {
                   <Route exact path="/admin/videos" component={AllVideosView} />
                   <Route exact path="/admin/messages" component={AllMessages} />
                   <Route exact path="/admin/feedbacks" component={AllFeedbacks} />
+                  {
+                    adminData.token ? 
+                    <>
+                      <Redirect from="/" to="/admin" />
+                    </> : <>
+                      <Redirect from="/" to="/admin/login" />
+                    </>
+                  }
                 </Switch>
           </Suspense>
           </React.Fragment>
